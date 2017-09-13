@@ -1,10 +1,10 @@
 ---
 applications:
 
-- name: d059185-sample-cloudsdk-bootcamp-analytics
+- name: sample-cloudsdk-bootcamp-analytics
   memory: 512M
-  host: d059185-sample-cloudsdk-bootcamp-analytics
+  host: sample-cloudsdk-bootcamp-analytics
   path: target/sample-cloudsdk-bootcamp-analytics.war
   buildpack: sap_java_buildpack
   env:
-    destinations: '[{name: "WebshopQueryEndpoint", url: "https://ivml2259.wdf.sap.corp:51036", username: "", password: ""}]'
+    destinations: '[{name: "WebshopQueryEndpoint", url: "<url>", username: "", password: ""}]'
