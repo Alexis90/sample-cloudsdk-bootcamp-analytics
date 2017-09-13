@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+	<edmx:DataServices>
+		<Schema Namespace="Analytics" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+			<EntityType Name="UserConsumption">
+				<Key>
+					<PropertyRef Name="UserID" />
+				</Key>
+				<Property Name="UserID" Type="Edm.String" MaxLength="50" />
+				<Property Name="OverallConsumption" Type="Edm.Double" />
+				<Property Name="Currency" Type="Edm.String" />
+			</EntityType>
+			<EntityType Name="OrderConsumption">
+				<Key>
+					<PropertyRef Name="ProductID" />
+				</Key>
+				<Property Name="ProductID" Type="Edm.String" />
+				<Property Name="OverallOrderAmount" Type="Edm.Int32" />
+				<Property Name="AverageOrderAmount" Type="Edm.Double" />
+				<Property Name="AvailableAmount" Type="Edm.Int32" />
+				<Property Name="PredictedAmount" Type="Edm.Int32" />
+				<Property Name="AveragePrice" Type="Edm.Double" />
+				<Property Name="Currency" Type="Edm.String" />
+				<Property Name="NumberOrders" Type="Edm.Int32" />
+				<Property Name="Description" Type="Edm.String" />
+			</EntityType>
+			<EntityContainer Name="EntityContainer">
+				<EntitySet Name="UserConsumption" EntityType="Analytics.UserConsumption" />
+				<EntitySet Name="OrderConsumption" EntityType="Analytics.OrderConsumption" />
+			</EntityContainer>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>
