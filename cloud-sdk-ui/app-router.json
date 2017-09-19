@@ -1,0 +1,27 @@
+{
+	"welcomeFile": "index.html",
+	"authenticationMethod": "route",
+	"routes": [{
+		"source": "(.*)(.xsjs)",
+		"destination": "core-backend",
+		"csrfProtection": false,
+		"authenticationType": "xsuaa"
+	}, {
+		"source": "(.*)(.xsodata)",
+		"destination": "core-backend",
+		"authenticationType": "xsuaa"
+	}, {
+		"source": "/DocManagement(.*)$",
+		"destination": "docservice-dest"
+	}, {
+		"source": "/api/demo_iss/persistence/",
+		"destination": "imagesimilarity-dest",
+		"httpMethods": [
+			"POST"
+		]
+
+	}, {
+		"source": "/AnalyticsService",
+		"destination": "cloudsdk-dest"
+	}]
+}
